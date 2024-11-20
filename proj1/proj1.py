@@ -78,4 +78,7 @@ with pd.ExcelWriter('output.xlsx') as writer:
     op_1_df.to_excel(writer, sheet_name='Seating Plan', index=False)
     op_2_df.to_excel(writer, sheet_name='Room Summary', index=False)
 
-print("Seating plan and room summary generated as 'output.xlsx'.")
+op_1_df.to_csv('seating_plan.csv', index=False)
+op_2_df.to_csv('room_summary.csv', index=False)
+
+print("Seating plan and room summary generated as 'output.xlsx', 'seating_plan.csv', and 'room_summary.csv'.")
